@@ -4,4 +4,9 @@ from sklearn.datasets import load_boston
 #load the Boston's dataset into the var dataset
 dataset = load_boston()
 
-print(dataset['DESCR'])
+def printDescription():
+    #printing a description of the dataset
+    print(dataset['DESCR'])
+
+if __name__ == '__main__':
+    printDescription()
