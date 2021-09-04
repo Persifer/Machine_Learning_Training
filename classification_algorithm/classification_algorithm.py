@@ -1,5 +1,6 @@
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
 
 def training_classificator(dataset):
     # taking the data of the iris flower from the dataset
@@ -10,7 +11,13 @@ def training_classificator(dataset):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y)
 
+    model = DecisionTreeClassifier()
+    model.fit(X_train, y_train)
 
+    prediction_train = model.predict(X_train)
+    prediction_test = model.predict(X_test)
+
+    
 
 
 if __name__ == '__main__':
